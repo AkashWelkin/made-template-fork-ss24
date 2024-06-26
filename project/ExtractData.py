@@ -51,6 +51,9 @@ class ExtractData:
               if os.path.isfile(file_path):
                   os.remove(file_path)
                   print(f"file removed: {filename}")
+    
+    def close(self):
+        self.kaggle_api.close()
         
         
         
@@ -60,16 +63,19 @@ class ExtractData:
 #pipeline
 if __name__ == '__main__':    
     extract = ExtractData()
-    extract.download_dataset('alessandrolobello/agri-food-co2-emission-dataset-forecasting-ml')        
-    dataset = extract.load_and_clean_data('Agrofood_co2_emission.csv')   
-    extract.save_data('ClimateDB', dataset,"emission")   
+    try:    
+        extract.download_dataset('alessandrolobello/agri-food-co2-emission-dataset-forecasting-ml')        
+        dataset = extract.load_and_clean_data('Agrofood_co2_emission.csv')   
+        extract.save_data('ClimateDB', dataset,"emission")   
 
-    print("Loading new data\n")             
-    extract.download_dataset("rajkumarpandey02/2023-world-population-by-country")
-    dataset = extract.load_and_clean_data("countries-table.csv")
-    extract.save_data('ClimateDB', dataset,"population")  
-    extract.remove_unnecessary_files()  
-        
+        print("Loading new data\n")             
+        extract.download_dataset("rajkumarpandey02/2023-world-population-by-country")
+        dataset = extract.load_and_clean_data("countries-table.csv")
+        extract.save_data('ClimateDB', dataset,"population")  
+    finally:
+        extract.remove_unnecessary_files()
+        extract.close()
+            
         
         
         
