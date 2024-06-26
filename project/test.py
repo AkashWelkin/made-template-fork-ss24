@@ -38,7 +38,7 @@ class ETLSystemTest(unittest.TestCase):
     @patch('ExtractData.create_engine')
     @patch('pandas.DataFrame.to_sql')
     def test_save_data(self, mock_to_sql, mock_create_engine):
-        mock_engine = mock_create_engine.connect().return_value
+        mock_engine = mock_create_engine.connect.return_value
         mock_data = pd.DataFrame({
              'Year': [1990, 1991, 1992, 1994],
              'Savanna fires': [14.72, 12.1, 12.4, 0.45]
