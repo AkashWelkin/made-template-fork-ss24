@@ -3,5 +3,4 @@ numpy
 sqlalchemy
 kaggle
 pytest
-sqlite3
 unittest
