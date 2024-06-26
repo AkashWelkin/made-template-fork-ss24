@@ -4,7 +4,7 @@ Created on Wed May 22 12:49:00 2024
 
 @author: Akash
 """
-import multiprocessing
+
 import os
 from kaggle.api.kaggle_api_extended import KaggleApi
 import pandas as pd
@@ -61,8 +61,8 @@ class ExtractData:
         
 #pipeline
 if __name__ == '__main__':    
-    pool = multiprocessing.pool.ThreadPool()
     extract = ExtractData()
+    
     try:    
         extract.download_dataset('alessandrolobello/agri-food-co2-emission-dataset-forecasting-ml')        
         dataset = extract.load_and_clean_data('Agrofood_co2_emission.csv')   
@@ -74,8 +74,7 @@ if __name__ == '__main__':
         extract.save_data('ClimateDB', dataset,"population")  
     finally:
         extract.remove_unnecessary_files()
-        pool.close()
-        pool.join()
+            
         
         
         
