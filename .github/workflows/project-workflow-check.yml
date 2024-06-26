@@ -26,6 +26,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r project/requirements.txt
 
+      - name: Create .kaggle directory
+        run: mkdir -p ~/.kaggle
+    
+      - name: Copy kaggle.json
+        env:
+          KAGGLE_JSON: ${{ secrets.KAGGLE_JSON }}
+        run: |
+          echo "$KAGGLE_JSON" > ~/.kaggle/kaggle.json
+          cat ~/.kaggle/kaggle.json  
+    
+      - name: Set permissions for kaggle.json
+        run: chmod 600 ~/.kaggle/kaggle.json
+    
+      - name: Verify kaggle.json file presence
+        run: ls -la ~/.kaggle  # Add this line to list the content of the directory (you can remove it later)
+    
       - name: Running Unit Test
         run: |
           chmod +x ./project/tests.sh
