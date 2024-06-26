@@ -52,8 +52,6 @@ class ExtractData:
                   os.remove(file_path)
                   print(f"file removed: {filename}")
     
-    def close(self):
-        self.kaggle_api.close()
         
         
         
@@ -74,7 +72,6 @@ if __name__ == '__main__':
         extract.save_data('ClimateDB', dataset,"population")  
     finally:
         extract.remove_unnecessary_files()
-        extract.close()
             
         
         
