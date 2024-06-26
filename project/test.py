@@ -46,7 +46,7 @@ class ETLSystemTest(unittest.TestCase):
         extract = ExtractData()
         extract.save_data('ClimateDB', mock_data,'mock_db')
 
-        mock_to_sql.assert_called_once_with('mock_db', con=mock_engine, if_exists='replace', index=False)
+        mock_to_sql.assert_called_once_with('mock_db', con=mock_engine, if_exists='replace', index=False,method=None)
 
 
 
