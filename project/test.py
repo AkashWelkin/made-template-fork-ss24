@@ -52,7 +52,8 @@ class ETLSystemTest(unittest.TestCase):
 
 @pytest.fixture
 def dbConnect():
-    db_path = "../data/ClimateDB.sqlite"
+    db_path = os.path.join(os.path.dirname(__file__), '../data/ClimateDB.sqlite')
+    #db_path = "../data/ClimateDB.sqlite"
     if not os.path.isfile(db_path):
         pytest.fail("Error:DB path does not exist")
     try:
