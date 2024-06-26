@@ -1,10 +1,11 @@
 #!/bin/bash
 
+
 echo "Running ETL Pipeline..."
-bash ./pipeline.sh
+bash ./project/pipeline.sh
 
 echo "Running System Level Test..."
-python ./test.py
+python ./project/test.py
 
 echo "Running unit-test/pytest..."
-pytest ./test.py
+pytest ./project/test.py
