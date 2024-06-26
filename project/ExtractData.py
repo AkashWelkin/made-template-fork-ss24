@@ -41,6 +41,7 @@ class ExtractData:
         print("Load into Sqlite\n")
         engine = create_engine(f'sqlite:///{self.download_dir}/{database_name}.sqlite')
         dataset.to_sql(table_name,con=engine,if_exists='replace',index=False)
+        engine.dispose()
     
     def remove_unnecessary_files(self):
         print("Removing Unnecessary Files")
