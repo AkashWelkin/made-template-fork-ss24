@@ -1,51 +1,75 @@
-# Exercise Badges
+> *In this repository, you will discover a data engineering and data science project, along with exercises leveraging open data sources as an integral component of the MADE ([Methods of Advanced Data Engineering](https://oss.cs.fau.de/teaching/specific/saki/)) course. The course was conducted by the FAU Chair for Open-Source Software (OSS) during the Summer 24' semester. This repository has been forked from the [jvalue-made-template](https://github.com/jvalue/made-template) repository.*
 
+### Badges
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![CI/CD](https://github.com/AkashWelkin/made-template-fork-ss24/actions/workflows/project-workflow-check.yml/badge.svg)](https://github.com/AkashWelkin/made-template-fork-ss24/actions/workflows/project-workflow-check.yml)
+[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
 ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex1) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex2) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex3) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex4) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex5)
 
-# Methods of Advanced Data Engineering Template Project
+## Exploring the Links Between Population Growth, CO2 Emissions, and Climate Change 🌎🔥🤷😬 🥴
+![image](https://github.com/AkashWelkin/made-template-fork-ss24/assets/32175280/d044bcb4-4145-47a6-b39c-484c9abf246a) <b>Image Credits:</b> Bryce Durbin / TechCrunch
 
-This template project provides some structure for your open data project in the MADE module at FAU.
-This repository contains (a) a data science project that is developed by the student over the course of the semester, and (b) the exercises that are submitted over the course of the semester.
-Before you begin, make sure you have [Python](https://www.python.org/) and [Jayvee](https://github.com/jvalue/jayvee) installed. We will work with [Jupyter notebooks](https://jupyter.org/). The easiest way to do so is to set up [VSCode](https://code.visualstudio.com/) with the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter).
+### Overview
+In recent years(this year 2024 also), problems like drought, severe heat waves, ever-increasing temperatures, heavy rainfall causing floods, seasonal cycle inconsistency, and hunger crises have beenescalating, highlighting the urgent need to understand the main causes of environmental damage. With the global population continuing to rise at an unpredictable rate, the increase in CO2 emissions fromforest fires, crop cultivation, pesticide manufacturing, and agrifood waste disposal presents a significant challenge to sustainable development and climate stability.To understand the impact of CO2 emissionsfrom all possible sources and the causes of increasing temperatures, deep data analysis has been performed on existing data to draw conclusions.
 
-To get started, please follow these steps:
-1. Create your own fork of this repository. Feel free to rename the repository right after creation, before you let the teaching instructors know your repository URL. **Do not rename the repository during the semester**.
-2. Setup the exercise feedback by changing the exercise badge sources in the `README.md` file following the patter `![](https://byob.yarr.is/<github-user-name>/<github-repo>/score_ex<exercise-number>)`. 
-For example, if your user is _myuser_ and your repo is _myrepo_, then update the badge for _exercise 1_ to `![](https://byob.yarr.is/myrepo/myuser/score_ex1)`. Proceed with the remaining badges accordingly.
+### Project Goal
+How does population distribution and density influence the climate impact of CO2 emissions across different regions?
 
+### Key project files and their functions:
 
-## Project Work
-Your data engineering project will run alongside lectures during the semester. We will ask you to regularly submit project work as milestones so you can reasonably pace your work. All project work submissions **must** be placed in the `project` folder.
+- `project/pipeline.sh`: To run an automated ETL pipeline for the project.
+- `project/tests.sh` : To run Unit Test cases.
+- `project/DataAnalysis.ipynb` : To get insights of data.
+- `project/ExtractData.py` : ETL python file.
 
-### Exporting a Jupyter Notebook
-Jupyter Notebooks can be exported using `nbconvert` (`pip install nbconvert`). For example, to export the example notebook to html: `jupyter nbconvert --to html examples/final-report-example.ipynb --embed-images --output final-report.html`
+### Pipeline Structure
+![image](https://github.com/AkashWelkin/made-template-fork-ss24/assets/32175280/84b26bb9-1694-4352-97d1-7f51df1311b5)
 
-
-## Exercises
-During the semester you will need to complete exercises using [Jayvee](https://github.com/jvalue/jayvee). You **must** place your submission in the `exercises` folder in your repository and name them according to their number from one to five: `exercise<number from 1-5>.jv`.
-
-In regular intervalls, exercises will be given as homework to complete during the semester. Details and deadlines will be discussed in the lecture, also see the [course schedule](https://made.uni1.de/). At the end of the semester, you will therefore have the following files in your repository:
-
-1. `./exercises/exercise1.jv`
-2. `./exercises/exercise2.jv`
-3. `./exercises/exercise3.jv`
-4. `./exercises/exercise4.jv`
-5. `./exercises/exercise5.jv`
-
-### Exercise Feedback
-We provide automated exercise feedback using a GitHub action (that is defined in `.github/workflows/exercise-feedback.yml`). 
-
-To view your exercise feedback, navigate to Actions -> Exercise Feedback in your repository.
-
-The exercise feedback is executed whenever you make a change in files in the `exercise` folder and push your local changes to the repository on GitHub. To see the feedback, open the latest GitHub Action run, open the `exercise-feedback` job and `Exercise Feedback` step. You should see command line output that contains output like this:
-
-```sh
-Found exercises/exercise1.jv, executing model...
-Found output file airports.sqlite, grading...
-Grading Exercise 1
-	Overall points 17 of 17
-	---
-	By category:
-		Shape: 4 of 4
-		Types: 13 of 13
+### Run Pipeline Locally
+1. Clone the github repo:
 ```
+git clone https://github.com/AkashWelkin/made-template-fork-ss24.git
+```
+2. Create virtual environment:(Optional)
+```
+python -m venv pipeline
+```
+3. Activate the virtual environment:
+```
+.\pipeline\Scripts\activate
+```
+4. Install requirements:
+```
+pip install -r requirements.txt
+```
+5. Run the pipeline:
+```
+python ./project/pipeline.sh
+```
+This will start a virtual environment and create a SQL database out of data sources named `ClimateDB` in `\data` directory.
+
+### Running Tests
+Run the unit testcases:
+```
+python ./project/test.sh
+```
+
+Project analysis report [here](/project/analysis-report.pdf), [data report](/project/data-report.pdf) and [presentation report](/project/presentation-video.md)
+
+### Final Note
+To recapitulate, the above visualizations, analysis, and figures provide a thorough understanding of CO2emissions and the impact of an increasing population on climate. At a high level, this analysissuccessfully answers the objective question. To support my initial hypothesis, I have provided an in-depth analysis and shown the correlation among population, temperature, and emissions. However,there were a few points where temperature and emissions had an inverse relationship, which requiresadditional information or may indicate that the data had some flaws.
+
+### Contributing
+
+Contributions are always welcome!
+
+## Feedback
+
+If you have any feedback, please reach out to me at ay1820098@.gmail.com
+
+
+
+
+
+
