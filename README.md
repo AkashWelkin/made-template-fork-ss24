@@ -8,7 +8,7 @@
 ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex1) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex2) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex3) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex4) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex5)
 
 ## Exploring the Links Between Population Growth, CO2 Emissions, and Climate Change 🌎🔥🤷😬 🥴
-![image](https://github.com/AkashWelkin/made-template-fork-ss24/assets/32175280/d044bcb4-4145-47a6-b39c-484c9abf246a) <b>Image Credits:</b> Bryce Durbin / TechCrunch
+![image](https://github.com/AkashWelkin/made-template-fork-ss24/assets/32175280/c3d8beaa-40d2-4816-9b9a-69b89c48e2df) <b>Image Credits:</b> Bryce Durbin / TechCrunch
 
 ### Overview
 In recent years(this year 2024 also), problems like drought, severe heat waves, ever-increasing temperatures, heavy rainfall causing floods, seasonal cycle inconsistency, and hunger crises have beenescalating, highlighting the urgent need to understand the main causes of environmental damage. With the global population continuing to rise at an unpredictable rate, the increase in CO2 emissions fromforest fires, crop cultivation, pesticide manufacturing, and agrifood waste disposal presents a significant challenge to sustainable development and climate stability.To understand the impact of CO2 emissionsfrom all possible sources and the causes of increasing temperatures, deep data analysis has been performed on existing data to draw conclusions.
