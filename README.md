@@ -7,7 +7,7 @@
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
 ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex1) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex2) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex3) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex4) ![](https://byob.yarr.is/AkashWelkin/made-template-fork-ss24/score_ex5)
 
-## Exploring the Links Between Population Growth, CO2 Emissions, and Climate Change 🌎🔥🤷😬 🥴
+## Exploring the Links Between Population Growth, CO2 Emissions, and Climate Change 🌎🔥
 ![image](https://github.com/AkashWelkin/made-template-fork-ss24/assets/32175280/c3d8beaa-40d2-4816-9b9a-69b89c48e2df) <b>Image Credits:</b> Bryce Durbin / TechCrunch
 
 ### Overview
